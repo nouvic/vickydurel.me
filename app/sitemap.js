@@ -20,6 +20,18 @@ export default function sitemap() {
       lastModified: LAST_MODIFIED,
       changeFrequency: "yearly",
       priority: 0.6
+    },
+    {
+      url: `${SITE_URL}/privacy`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3
+    },
+    {
+      url: `${SITE_URL}/terms`,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "yearly",
+      priority: 0.3
     }
   ];
 }

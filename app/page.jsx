@@ -26,7 +26,7 @@ const capabilities = [
   {
     number: "01",
     title: "Find the useful leverage",
-    copy: "Find the intervention that changes the operation—not just the demo.",
+    copy: "Find the one change that actually moves the operation, not the one that looks good in a demo.",
     image: "/v4/capability-leverage.png",
     alt: "A complex operating system with one useful path illuminated",
   },
@@ -75,7 +75,7 @@ export default function V4Homepage() {
           <Link href="/insights">Insights</Link>
         </nav>
         <a className={styles.navCta} href="#contact">
-          Start a conversation <ArrowUpRight aria-hidden="true" />
+          Let’s talk <ArrowUpRight aria-hidden="true" />
         </a>
       </header>
 
@@ -86,11 +86,11 @@ export default function V4Homepage() {
             <p className={styles.eyebrow}><CircleDot aria-hidden="true" /> Product builder · Systems operator</p>
             <h1>I build systems that hold up after the demo.</h1>
             <p className={styles.heroLead}>
-              I’m Vicky Durel. Since 2013, I’ve helped businesses turn technology into practical operating advantage—from software products and digitized workflows to the orchestration systems emerging now. The tools evolve. The standard does not: technology must make the business work better.
+              I’m Vicky Durel. Since 2013 I’ve helped businesses turn technology into something they can actually use. Software products, digitized workflows, and now the AI orchestration taking shape. The tools keep changing. What I hold onto doesn’t: technology should make the business work better, or it isn’t worth much.
             </p>
             <div className={styles.heroActions}>
               <a className={styles.primaryButton} href="#practice">See what I’m building <ArrowDownRight aria-hidden="true" /></a>
-              <a className={styles.textButton} href="#capacity">How I approach the work <MoveRight aria-hidden="true" /></a>
+              <a className={styles.textButton} href="#capacity">How I actually work <MoveRight aria-hidden="true" /></a>
             </div>
             <div className={styles.heroProof} aria-label="Professional summary">
               <span><Check aria-hidden="true" /> Client delivery since 2013</span>
@@ -133,8 +133,8 @@ export default function V4Homepage() {
               <h2>How the work takes shape.</h2>
             </div>
             <div>
-              <p>This is not a gallery of invented case studies. It is a visual map of the recurring work behind the systems I build: find the leverage, make it legible, engineer the workflow and design for trust.</p>
-              <small>Named client evidence will appear only where attribution and confidentiality permit.</small>
+              <p>These aren’t invented case studies. They’re the moves that show up again and again in the systems I build: find the leverage, make it clear, wire the workflow, and design it so people can trust it.</p>
+              <small>I name clients only where I’m allowed to.</small>
             </div>
           </div>
           <div className={styles.capabilityGrid}>
@@ -163,7 +163,7 @@ export default function V4Homepage() {
           <div className={styles.shiftHeader}>
             <div>
               <span className={styles.sectionIndex}>02 / The current technological shift</span>
-              <h2>AI changes what software can do—and what leaders must decide.</h2>
+              <h2>AI changes what software can do. It also changes what leaders have to decide.</h2>
             </div>
             <div>
               <p>Businesses are not short of AI tools. They are short of clarity about where AI belongs, what it should be allowed to do and where people must remain accountable.</p>
@@ -181,14 +181,14 @@ export default function V4Homepage() {
             <article className={styles.operatingNow}>
               <span>Now</span>
               <h3>Software can help coordinate the work.</h3>
-              <p>AI can interpret inputs, prepare responses, route decisions and monitor a workflow—inside boundaries the business defines.</p>
+              <p>AI can read inputs, draft responses, route decisions, and watch a workflow, all inside the boundaries the business sets.</p>
             </article>
           </div>
 
           <div className={styles.adoptionGrid}>
             <article><span>Why it feels confusing</span><p>The market sells models and tools. A business needs an operating decision: which workflow, which boundary and which result?</p></article>
             <article><span>What not to fear</span><p>Useful adoption starts small. One workflow can be tested, inspected and improved before anything expands.</p></article>
-            <article><span>Where people belong</span><p>Do not automate judgment away—or ask people to coordinate every routine step. Automate repetition; keep people on exceptions and accountability.</p></article>
+            <article><span>Where people belong</span><p>Don’t automate judgment away. And don’t make people babysit every routine step either. Automate the repetition; keep people on the exceptions and the accountability.</p></article>
           </div>
         </section>
 
@@ -200,8 +200,8 @@ export default function V4Homepage() {
               <h2>The next digital advantage is not another tool. It is a system that can coordinate the work.</h2>
             </div>
             <div className={styles.practiceCopy}>
-              <p>My current work applies AI orchestration to business workflows: connecting inputs, approved decisions, routine actions, human judgment and measurable outcomes into one controlled operating path.</p>
-              <p>The first productized wedge is lead response and recovery for owner-led residential HVAC companies. That commercial offer will live on its own page. Here, it demonstrates the same philosophy that shaped my earlier work: adopt technology around a real operating advantage, not around the novelty of the tool.</p>
+              <p>Right now I’m applying AI orchestration to real business workflows: tying together inputs, approved decisions, routine actions, human judgment, and outcomes you can measure, into one path you can actually control.</p>
+              <p>The first real product is lead response and recovery for owner-run HVAC companies. That offer will get its own page. It comes from the same instinct that shaped everything before it: build around a real advantage, not around whatever tool happens to be new.</p>
             </div>
           </div>
           <div className={styles.practiceRail}>
@@ -259,9 +259,9 @@ export default function V4Homepage() {
 
         <section id="contact" className={styles.contact}>
           <div className={styles.contactIntro}>
-            <span>For considered work and serious conversations</span>
+            <span>If you’d rather just talk</span>
             <h2>If you searched my name before replying, this page did its job.</h2>
-            <p>This is my professional home—not a funnel disguised as a biography. If the way I think fits the problem you are solving, start with context.</p>
+            <p>This is my professional home, not a funnel dressed up as a bio. If the way I think fits what you’re working on, tell me about it.</p>
             <a className={styles.contactLink} href="mailto:hi@vickydurel.me">hi@vickydurel.me <ArrowUpRight aria-hidden="true" /></a>
           </div>
           <V4ContactForm />
@@ -271,7 +271,7 @@ export default function V4Homepage() {
       <footer className={styles.footer}>
         <Link href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
         <p>Product builder and systems operator · Client delivery since 2013</p>
-        <div><Link href="/insights">Insights</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
+        <div><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
       </footer>
     </div>
   );

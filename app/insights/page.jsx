@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 const lanes = [
-  ["AI adoption", "Where AI creates operating leverage—and where it creates unnecessary risk."],
+  ["AI adoption", "Where AI creates real operating leverage, and where it just adds risk."],
   ["Workflow design", "How inputs, decisions, actions and exceptions become a system people can run."],
   ["Operator notes", "Practical lessons from building software products and operational systems since 2013."],
 ];
@@ -30,7 +30,7 @@ export default function InsightsPage() {
           <div><span className={styles.featureMeta}>Field note 001 · 7 min read</span></div>
           <article>
             <h2>Where AI belongs in a business workflow.</h2>
-            <p>The useful question is not “Which AI should we buy?” It is “Which operating event deserves a better response—and what should remain under human judgment?”</p>
+            <p>The useful question isn’t “Which AI should we buy?” It’s “Which moment in the business deserves a better response, and what should stay under human judgment?”</p>
             <Link href="/insights/where-ai-belongs">Read the field note <ArrowRight aria-hidden="true" /></Link>
           </article>
         </section>
