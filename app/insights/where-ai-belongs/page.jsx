@@ -1,16 +1,40 @@
 import Link from "next/link";
-import { buildMetadata } from "../../lib/seo";
+import { buildArticleMetadata, PERSON_ID, SITE_NAME, SITE_URL } from "../../lib/seo";
 import styles from "../insights.module.css";
 
-export const metadata = buildMetadata({
-  title: "Where AI Belongs in a Business Workflow — Vicky Durel",
+const ARTICLE_PATH = "/insights/where-ai-belongs";
+const ARTICLE_URL = `${SITE_URL}${ARTICLE_PATH}`;
+const ARTICLE_TITLE = "Where AI Belongs in a Business Workflow";
+const ARTICLE_DATE = "2026-07-16";
+
+export const metadata = buildArticleMetadata({
+  title: `${ARTICLE_TITLE} — ${SITE_NAME}`,
   description: "A practical framework for deciding where AI should enter a business workflow, what it may automate and where human judgment must remain.",
-  path: "/insights/where-ai-belongs",
+  path: ARTICLE_PATH,
+  publishedTime: ARTICLE_DATE,
+  modifiedTime: ARTICLE_DATE,
 });
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": `${ARTICLE_URL}#article`,
+  headline: ARTICLE_TITLE,
+  datePublished: ARTICLE_DATE,
+  dateModified: ARTICLE_DATE,
+  author: { "@id": PERSON_ID },
+  publisher: { "@id": PERSON_ID },
+  image: `${SITE_URL}/v4/vicky-durel-insights-v1.png`,
+  mainEntityOfPage: { "@type": "WebPage", "@id": ARTICLE_URL }
+};
 
 export default function WhereAiBelongsPage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <header className={styles.header}>
         <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
         <Link href="/insights">All Insights</Link>

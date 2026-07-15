@@ -16,7 +16,7 @@ import { V4ContactForm } from "@/components/V4ContactForm";
 import { MobileBoot } from "@/components/MobileBoot";
 import { BottomNav } from "@/components/BottomNav";
 import { MobileMenu } from "@/components/MobileMenu";
-import { buildMetadata, SITE_NAME, TAGLINE, DESCRIPTION } from "./lib/seo";
+import { buildMetadata, SITE_URL, SITE_NAME, TAGLINE, DESCRIPTION, PERSON_ID } from "./lib/seo";
 import styles from "./v4.module.css";
 
 export const metadata = buildMetadata({
@@ -24,6 +24,15 @@ export const metadata = buildMetadata({
   description: DESCRIPTION,
   path: "/",
 });
+
+const profilePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": `${SITE_URL}/#profile-page`,
+  url: `${SITE_URL}/`,
+  name: `${SITE_NAME} — ${TAGLINE}`,
+  mainEntity: { "@id": PERSON_ID }
+};
 
 const capabilities = [
   {
@@ -65,6 +74,10 @@ const principles = [
 export default function V4Homepage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
+      />
       <MobileBoot />
       <header className={styles.header}>
         <Link className={styles.wordmark} href="/" aria-label="Vicky Durel home">
@@ -106,8 +119,8 @@ export default function V4Homepage() {
           <div className={styles.portrait}>
             <Image
               className={styles.portraitImage}
-              src="/v4/vicky-durel-hero.png"
-              alt="Portrait of Vicky Durel, product builder and systems operator"
+              src="/v4/vicky-durel-hero-v2.png"
+              alt="Portrait of Vicky Durel in a charcoal blazer"
               fill
               priority
               sizes="(max-width: 760px) 100vw, 42vw"
@@ -275,7 +288,7 @@ export default function V4Homepage() {
       <footer className={styles.footer}>
         <Link href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
         <p>Product builder and systems operator · Client delivery since 2013</p>
-        <div><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
+        <div><Link href="/about">About</Link><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
       </footer>
       <BottomNav />
     </div>

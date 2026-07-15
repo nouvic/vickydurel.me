@@ -1,6 +1,6 @@
 import "./globals.css";
 import { inter, spaceGrotesk } from "./fonts";
-import { SITE_URL, SITE_NAME, TAGLINE, DESCRIPTION } from "./lib/seo";
+import { SITE_URL, SITE_NAME, TAGLINE, DESCRIPTION, PERSON_ID } from "./lib/seo";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -25,7 +25,7 @@ export const metadata = {
     "UAE",
     "UK"
   ],
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", languages: { en: "/" } },
   robots: {
     index: true,
     follow: true,
@@ -44,18 +44,11 @@ export const metadata = {
     title: `${SITE_NAME} — ${TAGLINE}`,
     description: DESCRIPTION,
     locale: "en_US",
-    images: [
-      {
-        url: "/v4/vicky-durel-hero.png",
-        alt: "Portrait of Vicky Durel, product builder and systems operator"
-      }
-    ]
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — ${TAGLINE}`,
     description: DESCRIPTION,
-    images: ["/v4/vicky-durel-hero.png"]
   },
   category: "technology"
 };
@@ -67,13 +60,17 @@ export const viewport = {
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": PERSON_ID,
   name: SITE_NAME,
   url: SITE_URL,
   email: "hi@vickydurel.me",
   jobTitle: TAGLINE,
   description: DESCRIPTION,
-  image: `${SITE_URL}/v4/vicky-durel-hero.png`,
-  sameAs: ["https://www.linkedin.com/in/vicky-durel/"],
+  image: `${SITE_URL}/v4/vicky-durel-hero-v2.png`,
+  sameAs: [
+    "https://www.linkedin.com/in/vicky-durel/",
+    "https://github.com/nouvic"
+  ],
   knowsAbout: [
     "AI orchestration",
     "Business workflow design",
@@ -87,6 +84,15 @@ const personSchema = {
   }
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: SITE_NAME,
+  publisher: { "@id": PERSON_ID }
+};
+
 /** @param {{ children: import('react').ReactNode }} props */
 export default function RootLayout({ children }) {
   return (
@@ -97,6 +103,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </body>
     </html>
