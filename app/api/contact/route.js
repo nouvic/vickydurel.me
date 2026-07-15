@@ -52,7 +52,7 @@ export async function POST(request) {
 
   const payload = {
     from: { address: FROM, name: "vickydurel.me" },
-    to: [{ email_address: { address: TO, name: "Vicky Durel NOUPO" } }],
+    to: [{ email_address: { address: TO, name: "Vicky Durel" } }],
     reply_to: [{ address: email, name }],
     subject: `New message from ${name} via vickydurel.me`,
     htmlbody: html,

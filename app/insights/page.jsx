@@ -5,8 +5,8 @@ import { buildMetadata } from "../lib/seo";
 import styles from "./insights.module.css";
 
 export const metadata = buildMetadata({
-  title: "Insights on AI, Systems & Operations — Vicky Durel NOUPO",
-  description: "Practical field notes from Vicky Durel NOUPO on AI adoption, workflow design and building business systems that remain accountable.",
+  title: "Insights on AI, Systems & Operations — Vicky Durel",
+  description: "Practical field notes from Vicky Durel on AI adoption, workflow design and building business systems that remain accountable.",
   path: "/insights",
 });
 
@@ -20,7 +20,7 @@ export default function InsightsPage() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel NOUPO</strong></Link>
+        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
         <Link href="/">Return home</Link>
       </header>
       <main id="main-content">
@@ -32,7 +32,7 @@ export default function InsightsPage() {
           <div className={styles.featureVisual}>
             <Image
               src="/v4/vicky-durel-insights-v1.png"
-              alt="Vicky Durel NOUPO beside a working session table"
+              alt="Vicky Durel beside a working session table"
               fill
               sizes="(max-width: 760px) 100vw, 42vw"
             />
@@ -50,7 +50,7 @@ export default function InsightsPage() {
           <div className={styles.laneGrid}>{lanes.map(([title, copy], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
         </section>
       </main>
-      <footer className={styles.footer}><span>Vicky Durel NOUPO · Insights</span><Link href="mailto:hi@vickydurel.me">hi@vickydurel.me</Link></footer>
+      <footer className={styles.footer}><span>Vicky Durel · Insights</span><Link href="mailto:hi@vickydurel.me">hi@vickydurel.me</Link></footer>
     </div>
   );
 }

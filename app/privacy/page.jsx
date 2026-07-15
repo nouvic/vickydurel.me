@@ -3,7 +3,7 @@ import { buildMetadata } from "../lib/seo";
 import styles from "../insights/insights.module.css";
 
 export const metadata = buildMetadata({
-  title: "Privacy Policy — Vicky Durel NOUPO",
+  title: "Privacy Policy — Vicky Durel",
   description: "How vickydurel.me handles the information you share, in plain language.",
   path: "/privacy",
 });
@@ -12,7 +12,7 @@ export default function PrivacyPage() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel NOUPO</strong></Link>
+        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
         <Link href="/">Return home</Link>
       </header>
       <main id="main-content">
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
           </aside>
         </article>
       </main>
-      <footer className={styles.footer}><span>Vicky Durel NOUPO</span><Link href="/">Return home</Link></footer>
+      <footer className={styles.footer}><span>Vicky Durel</span><Link href="/">Return home</Link></footer>
     </div>
   );
 }

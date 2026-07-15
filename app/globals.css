@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --brand-footer-gradient: linear-gradient(120deg, #26104f 0%, #100a19 52%, #050507 100%);
   color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

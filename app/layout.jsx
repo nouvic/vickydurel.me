@@ -14,7 +14,7 @@ export const metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   keywords: [
-    "Vicky Durel NOUPO",
+    "Vicky Durel",
     "product builder",
     "systems operator",
     "AI orchestration",
