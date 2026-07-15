@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { buildMetadata } from "../lib/seo";
 import styles from "../insights/insights.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Terms of Service — Vicky Durel",
   description: "The simple terms for using vickydurel.me.",
-  alternates: { canonical: "/terms" },
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (

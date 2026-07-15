@@ -16,13 +16,14 @@ import { V4ContactForm } from "@/components/V4ContactForm";
 import { MobileBoot } from "@/components/MobileBoot";
 import { BottomNav } from "@/components/BottomNav";
 import { MobileMenu } from "@/components/MobileMenu";
+import { buildMetadata, SITE_NAME, TAGLINE, DESCRIPTION } from "./lib/seo";
 import styles from "./v4.module.css";
 
-export const metadata = {
-  title: "Vicky Durel — Product Builder & Systems Operator",
-  description:
-    "Vicky Durel has helped businesses turn technology into practical operating advantage through software, digital workflows and orchestration systems since 2013.",
-};
+export const metadata = buildMetadata({
+  title: `${SITE_NAME} — ${TAGLINE}`,
+  description: DESCRIPTION,
+  path: "/",
+});
 
 const capabilities = [
   {

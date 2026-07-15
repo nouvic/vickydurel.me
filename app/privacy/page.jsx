@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { buildMetadata } from "../lib/seo";
 import styles from "../insights/insights.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Privacy Policy — Vicky Durel",
   description: "How vickydurel.me handles the information you share, in plain language.",
-  alternates: { canonical: "/privacy" },
-};
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

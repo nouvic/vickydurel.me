@@ -1,4 +1,4 @@
-const SITE_URL = "https://vickydurel.me";
+import { SITE_URL } from "./lib/seo";
 
 export default function robots() {
   return {

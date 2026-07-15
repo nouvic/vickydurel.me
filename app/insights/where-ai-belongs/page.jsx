@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { buildMetadata } from "../../lib/seo";
 import styles from "../insights.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Where AI Belongs in a Business Workflow — Vicky Durel",
   description: "A practical framework for deciding where AI should enter a business workflow, what it may automate and where human judgment must remain.",
-  alternates: { canonical: "/insights/where-ai-belongs" },
-};
+  path: "/insights/where-ai-belongs",
+});
 
 export default function WhereAiBelongsPage() {
   return (

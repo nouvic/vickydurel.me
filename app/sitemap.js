@@ -1,4 +1,5 @@
-const SITE_URL = "https://vickydurel.me";
+import { SITE_URL } from "./lib/seo";
+
 const LAST_MODIFIED = "2026-07-16";
 
 export default function sitemap() {

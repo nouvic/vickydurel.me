@@ -1,11 +1,6 @@
 import "./globals.css";
 import { inter, spaceGrotesk } from "./fonts";
-
-const SITE_URL = "https://vickydurel.me";
-const SITE_NAME = "Vicky Durel";
-const TAGLINE = "Product Builder & Systems Operator";
-const DESCRIPTION =
-  "Vicky Durel has helped businesses turn technology into practical operating advantage through software, digital workflows and AI orchestration systems since 2013.";
+import { SITE_URL, SITE_NAME, TAGLINE, DESCRIPTION } from "./lib/seo";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),

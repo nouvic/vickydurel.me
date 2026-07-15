@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { buildMetadata } from "../lib/seo";
 import styles from "./insights.module.css";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "Insights on AI, Systems & Operations — Vicky Durel",
   description: "Practical field notes from Vicky Durel on AI adoption, workflow design and building business systems that remain accountable.",
-  alternates: { canonical: "/insights" },
-};
+  path: "/insights",
+});
 
 const lanes = [
   ["AI adoption", "Where AI creates real operating leverage, and where it just adds risk."],
