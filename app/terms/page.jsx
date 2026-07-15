@@ -3,7 +3,7 @@ import { buildMetadata } from "../lib/seo";
 import styles from "../insights/insights.module.css";
 
 export const metadata = buildMetadata({
-  title: "Terms of Service — Vicky Durel",
+  title: "Terms of Service — Vicky Durel NOUPO",
   description: "The simple terms for using vickydurel.me.",
   path: "/terms",
 });
@@ -12,7 +12,7 @@ export default function TermsPage() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
+        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel NOUPO</strong></Link>
         <Link href="/">Return home</Link>
       </header>
       <main id="main-content">
@@ -48,7 +48,7 @@ export default function TermsPage() {
           </aside>
         </article>
       </main>
-      <footer className={styles.footer}><span>Vicky Durel</span><Link href="/">Return home</Link></footer>
+      <footer className={styles.footer}><span>Vicky Durel NOUPO</span><Link href="/">Return home</Link></footer>
     </div>
   );
 }

@@ -80,9 +80,9 @@ export default function V4Homepage() {
       />
       <MobileBoot />
       <header className={styles.header}>
-        <Link className={styles.wordmark} href="/" aria-label="Vicky Durel home">
+        <Link className={styles.wordmark} href="/" aria-label="Vicky Durel NOUPO home">
           <span>VD</span>
-          <strong>Vicky Durel</strong>
+          <strong>Vicky Durel NOUPO</strong>
         </Link>
         <nav className={styles.nav} aria-label="Primary navigation">
           <a href="#capacity">Capabilities</a>
@@ -103,7 +103,7 @@ export default function V4Homepage() {
             <p className={styles.eyebrow}><CircleDot aria-hidden="true" /> Product builder · Systems operator</p>
             <h1>I build systems that hold up after the demo.</h1>
             <p className={styles.heroLead}>
-              I’m Vicky Durel. Since 2013 I’ve helped businesses turn technology into something they can actually use. Software products, digitized workflows, and now the AI orchestration taking shape. The tools keep changing. What I hold onto doesn’t: technology should make the business work better, or it isn’t worth much.
+              I’m Vicky Durel NOUPO. Since 2013 I’ve helped businesses turn technology into something they can actually use. Software products, digitized workflows, and now the AI orchestration taking shape. The tools keep changing. What I hold onto doesn’t: technology should make the business work better, or it isn’t worth much.
             </p>
             <div className={styles.heroActions}>
               <a className={styles.primaryButton} href="#practice">See what I’m building <ArrowDownRight aria-hidden="true" /></a>
@@ -119,14 +119,14 @@ export default function V4Homepage() {
           <div className={styles.portrait}>
             <Image
               className={styles.portraitImage}
-              src="/v4/vicky-durel-hero-v2.png"
-              alt="Portrait of Vicky Durel in a charcoal blazer"
+              src="/v4/vicky-durel-hero.png"
+              alt="Portrait of Vicky Durel NOUPO, product builder and systems operator"
               fill
               priority
               sizes="(max-width: 760px) 100vw, 42vw"
             />
             <div className={styles.portraitShade} aria-hidden="true" />
-            <div className={styles.portraitTop}><span>Vicky Durel</span><span>2026 / 01</span></div>
+            <div className={styles.portraitTop}><span>Vicky Durel NOUPO</span><span>2026 / 01</span></div>
             <div className={styles.portraitLabel}>
               <span>Independent practice</span>
               <strong>Technology made operational</strong>
@@ -286,7 +286,7 @@ export default function V4Homepage() {
       </main>
 
       <footer className={styles.footer}>
-        <Link href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
+        <Link href="/"><span>VD</span><strong>Vicky Durel NOUPO</strong></Link>
         <p>Product builder and systems operator · Client delivery since 2013</p>
         <div><Link href="/about">About</Link><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
       </footer>

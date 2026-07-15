@@ -1,9 +1,9 @@
 export const SITE_URL = "https://www.vickydurel.me";
-export const SITE_NAME = "Vicky Durel";
+export const SITE_NAME = "Vicky Durel NOUPO";
 export const PERSON_ID = `${SITE_URL}/#person`;
 export const TAGLINE = "Product Builder & Systems Operator";
 export const DESCRIPTION =
-  "Vicky Durel has helped businesses turn technology into practical operating advantage through software, digital workflows and AI orchestration systems since 2013.";
+  "Vicky Durel NOUPO has helped businesses turn technology into practical operating advantage through software, digital workflows and AI orchestration systems since 2013.";
 
 /**
  * Builds a full per-page metadata object so openGraph/twitter always carry

@@ -14,7 +14,7 @@ function readLocalImageAsDataUri(publicPath) {
   return `data:${EXTENSION_MIME[extension] || "image/png"};base64,${bytes.toString("base64")}`;
 }
 
-export function createOgImage({ eyebrow, title, image = "/v4/vicky-durel-hero-v2.png", align = "left" }) {
+export function createOgImage({ eyebrow, title, image = "/v4/vicky-durel-hero.png", align = "left" }) {
   return new ImageResponse(
     <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", background: "#070b0d", color: "#f3f0e8", fontFamily: "Arial, sans-serif" }}>
       <img src={readLocalImageAsDataUri(image)} alt="" width="1200" height="630" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />

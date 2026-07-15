@@ -4,8 +4,8 @@ import { buildMetadata, PERSON_ID, SITE_NAME, SITE_URL } from "../lib/seo";
 import styles from "./about.module.css";
 
 export const metadata = buildMetadata({
-  title: `About — ${SITE_NAME}`,
-  description: "The early pattern behind Vicky Durel’s work in digital adoption, software products, connected workflows and AI orchestration.",
+  title: `About | ${SITE_NAME}`,
+  description: "The early pattern behind Vicky Durel NOUPO’s work in digital adoption, software products, connected workflows and AI orchestration.",
   path: "/about",
 });
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageSchema) }}
       />
       <header className={styles.header}>
-        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
+        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel NOUPO</strong></Link>
         <Link href="/">Return home</Link>
       </header>
       <main id="main-content">
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <div className={styles.portrait}>
             <Image
               src="/v4/vicky-durel-profile-v1.png"
-              alt="Portrait of Vicky Durel in a grey suit"
+              alt="Portrait of Vicky Durel NOUPO in a grey suit"
               fill
               priority
               sizes="(max-width: 760px) 100vw, 42vw"
@@ -49,7 +49,7 @@ export default function AboutPage() {
         </section>
       </main>
       <footer className={styles.footer}>
-        <span>Vicky Durel</span>
+        <span>Vicky Durel NOUPO</span>
         <div><Link href="/insights">Insights</Link><a href="mailto:hi@vickydurel.me">Email</a></div>
       </footer>
     </div>

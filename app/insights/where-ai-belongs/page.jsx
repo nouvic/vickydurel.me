@@ -36,7 +36,7 @@ export default function WhereAiBelongsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <header className={styles.header}>
-        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
+        <Link className={styles.wordmark} href="/"><span>VD</span><strong>Vicky Durel NOUPO</strong></Link>
         <Link href="/insights">All Insights</Link>
       </header>
       <main id="main-content">
@@ -44,7 +44,7 @@ export default function WhereAiBelongsPage() {
           <Link href="/insights">Insights / AI adoption</Link>
           <h1>Where AI belongs in a business workflow.</h1>
           <p>Start with the operating event, not the model. The goal is not to add AI to the business. It is to improve how the business responds when something consequential happens.</p>
-          <div className={styles.articleMeta}><span>Vicky Durel</span><span>Field note 001</span><span>7 min read</span></div>
+          <div className={styles.articleMeta}><span>Vicky Durel NOUPO</span><span>Field note 001</span><span>7 min read</span></div>
         </header>
         <article className={styles.article}>
           <p>Most AI conversations begin one level too high. A leader sees a demonstration, hears that competitors are moving and asks which platform the company should adopt. That question produces a list of tools. It rarely produces an operating advantage.</p>
@@ -83,7 +83,7 @@ export default function WhereAiBelongsPage() {
           </aside>
         </article>
       </main>
-      <footer className={styles.footer}><span>Vicky Durel · Insights</span><Link href="/">Return home</Link></footer>
+      <footer className={styles.footer}><span>Vicky Durel NOUPO · Insights</span><Link href="/">Return home</Link></footer>
     </div>
   );
 }

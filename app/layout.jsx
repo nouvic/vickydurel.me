@@ -14,7 +14,7 @@ export const metadata = {
   creator: SITE_NAME,
   publisher: SITE_NAME,
   keywords: [
-    "Vicky Durel",
+    "Vicky Durel NOUPO",
     "product builder",
     "systems operator",
     "AI orchestration",
@@ -66,7 +66,7 @@ const personSchema = {
   email: "hi@vickydurel.me",
   jobTitle: TAGLINE,
   description: DESCRIPTION,
-  image: `${SITE_URL}/v4/vicky-durel-hero-v2.png`,
+  image: `${SITE_URL}/v4/vicky-durel-hero.png`,
   sameAs: [
     "https://www.linkedin.com/in/vicky-durel/",
     "https://github.com/nouvic"

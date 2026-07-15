@@ -22,7 +22,10 @@
 .hero p { align-self: end; color: var(--muted); font-size: 19px; line-height: 1.7; margin: 0; }
 
 .featured { background: var(--night); color: #fff; display: grid; gap: 72px; grid-template-columns: 0.75fr 1fr; padding: 90px max(32px, calc((100vw - 1320px) / 2)); }
-.featureMeta { color: #bca5ff; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+.featureVisual { min-height: 460px; overflow: hidden; position: relative; }
+.featureVisual::after { background: linear-gradient(180deg, transparent 55%, rgba(16, 10, 25, .88)); content: ""; inset: 0; position: absolute; }
+.featureVisual img { object-fit: cover; object-position: 34% center; }
+.featureMeta { bottom: 24px; color: #d7c9ff; font-size: 11px; left: 24px; letter-spacing: 0.12em; position: absolute; text-transform: uppercase; z-index: 1; }
 .featured h2 { font-family: var(--font-space-grotesk), sans-serif; font-size: clamp(42px, 6vw, 78px); font-weight: 520; letter-spacing: -0.06em; line-height: 0.95; margin: 32px 0; }
 .featured p { color: #c9c1ce; font-size: 16px; line-height: 1.7; max-width: 650px; }
 .featured a { align-items: center; border-bottom: 1px solid rgba(255,255,255,.28); color: #fff; display: flex; font-weight: 700; justify-content: space-between; padding-bottom: 14px; text-decoration: none; }
@@ -59,6 +62,7 @@
   .hero { gap: 50px; grid-template-columns: 1fr; padding: 78px 20px 70px; }
   .hero h1 { font-size: clamp(70px, 24vw, 104px); }
   .featured { gap: 48px; grid-template-columns: 1fr; padding: 72px 20px; }
+  .featureVisual { min-height: 380px; }
   .lanes { padding: 78px 20px; }
   .laneGrid { grid-template-columns: 1fr; }
   .laneGrid article,
