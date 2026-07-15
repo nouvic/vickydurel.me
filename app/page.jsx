@@ -13,7 +13,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { V4ContactForm } from "@/components/V4ContactForm";
-import { V4MobileSplash } from "@/components/V4MobileSplash";
+import { MobileBoot } from "@/components/MobileBoot";
+import { BottomNav } from "@/components/BottomNav";
+import { MobileMenu } from "@/components/MobileMenu";
 import styles from "./v4.module.css";
 
 export const metadata = {
@@ -62,7 +64,7 @@ const principles = [
 export default function V4Homepage() {
   return (
     <div className={styles.page}>
-      <V4MobileSplash />
+      <MobileBoot />
       <header className={styles.header}>
         <Link className={styles.wordmark} href="/" aria-label="Vicky Durel home">
           <span>VD</span>
@@ -77,6 +79,7 @@ export default function V4Homepage() {
         <a className={styles.navCta} href="#contact">
           Let’s talk <ArrowUpRight aria-hidden="true" />
         </a>
+        <MobileMenu />
       </header>
 
       <main id="main-content">
@@ -273,6 +276,7 @@ export default function V4Homepage() {
         <p>Product builder and systems operator · Client delivery since 2013</p>
         <div><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
       </footer>
+      <BottomNav />
     </div>
   );
 }
