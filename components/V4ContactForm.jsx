@@ -5,21 +5,44 @@ import { ArrowUpRight } from "lucide-react";
 import styles from "@/app/v4.module.css";
 
 export function V4ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [errorMsg, setErrorMsg] = useState("");
 
   /** @param {import("react").FormEvent<HTMLFormElement>} event */
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    setSubmitted(true);
+    if (status === "sending") return;
+    const form = event.currentTarget;
+    const payload = Object.fromEntries(new FormData(form).entries());
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.ok) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+        setErrorMsg(json.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg("Couldn't reach the server. Try again, or email hi@vickydurel.me.");
+    }
   }
 
-  if (submitted) {
+  if (status === "sent") {
     return (
       <div className={styles.contactConfirmation} role="status">
-        <span>Preview complete</span>
-        <strong>The interface works. No message was transmitted.</strong>
-        <p>The production form will connect to the approved CRM or email workflow after the UI and data policy are finalized.</p>
-        <button type="button" onClick={() => setSubmitted(false)}>Return to form</button>
+        <span>Message sent</span>
+        <strong>Thanks, it’s in my inbox.</strong>
+        <p>I read every message myself, so I’ll get back to you personally. If it’s urgent, you can also reach me at hi@vickydurel.me.</p>
+        <button type="button" onClick={() => setStatus("idle")}>Send another</button>
       </div>
     );
   }
@@ -37,12 +60,22 @@ export function V4ContactForm() {
         </label>
       </div>
       <label>
-        <span>What are you working through?</span>
+        <span>What are you working on?</span>
         <textarea name="context" rows={4} required />
       </label>
+      <input
+        name="company"
+        type="text"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+      />
       <div className={styles.formFooter}>
-        <small>Private preview · this form does not transmit data.</small>
-        <button type="submit">Send context <ArrowUpRight aria-hidden="true" /></button>
+        <small>{status === "error" ? errorMsg : "Goes straight to my inbox. I reply personally."}</small>
+        <button type="submit" disabled={status === "sending"}>
+          {status === "sending" ? "Sending…" : (<>Send it over <ArrowUpRight aria-hidden="true" /></>)}
+        </button>
       </div>
     </form>
   );
