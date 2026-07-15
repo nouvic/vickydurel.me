@@ -54,7 +54,7 @@
 .articleCta strong { display: block; font-family: var(--font-space-grotesk), sans-serif; font-size: 25px; margin-bottom: 12px; }
 .articleCta p { font-size: 15px; margin-bottom: 20px; }
 .articleCta a { color: var(--violet); font-weight: 750; text-decoration: none; }
-.footer { background: var(--night); color: #fff; display: flex; justify-content: space-between; padding: 30px max(32px, calc((100vw - 1320px) / 2)); }
+.footer { background: linear-gradient(120deg, #26104f 0%, #100a19 52%, #050507 100%); color: #fff; display: flex; justify-content: space-between; padding: 30px max(32px, calc((100vw - 1320px) / 2)); }
 .footer a { color: inherit; font-size: 12px; text-decoration: none; }
 
 @media (max-width: 760px) {

@@ -10,7 +10,7 @@
 .copy p { max-width: 700px; color: #b9c0c1; font-size: clamp(18px, 1.5vw, 23px); line-height: 1.7; }
 .portrait { position: relative; min-height: 720px; overflow: hidden; }
 .portrait img { object-fit: cover; object-position: center 22%; }
-.footer { border-top: 1px solid rgba(255,255,255,.12); border-bottom: 0; }
+.footer { background: linear-gradient(120deg, #26104f 0%, #100a19 52%, #050507 100%); border-top: 1px solid rgba(255,255,255,.12); border-bottom: 0; }
 .footer div { display: flex; gap: 24px; }
 @media (max-width: 760px) {
   .header, .footer { padding: 0 20px; }
