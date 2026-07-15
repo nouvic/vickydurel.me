@@ -1,0 +1,6 @@
+.env
+.env.*
+screenshots
+start-dev-container.sh
+.next
+node_modules
