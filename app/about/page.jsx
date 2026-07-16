@@ -50,7 +50,7 @@ export default function AboutPage() {
       </main>
       <footer className={styles.footer}>
         <span>Vicky Durel</span>
-        <div><Link href="/insights">Insights</Link><a href="mailto:hi@vickydurel.me">Email</a></div>
+        <div><Link href="/insights">Insights</Link><Link href="/#contact">Contact</Link></div>
       </footer>
     </div>
   );

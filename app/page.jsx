@@ -278,7 +278,6 @@ export default function V4Homepage() {
             <span>If you’d rather just talk</span>
             <h2>If you searched my name before replying, this page did its job.</h2>
             <p>This is my professional home, not a funnel dressed up as a bio. If the way I think fits what you’re working on, tell me about it.</p>
-            <a className={styles.contactLink} href="mailto:hi@vickydurel.me">hi@vickydurel.me <ArrowUpRight aria-hidden="true" /></a>
           </div>
           <V4ContactForm />
         </section>
@@ -287,7 +286,7 @@ export default function V4Homepage() {
       <footer className={styles.footer}>
         <Link href="/"><span>VD</span><strong>Vicky Durel</strong></Link>
         <p>Product builder and systems operator · Client delivery since 2013</p>
-        <div><Link href="/about">About</Link><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
+        <div><Link href="/about">About</Link><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><Link href="#contact">Contact</Link></div>
       </footer>
     </div>
   );

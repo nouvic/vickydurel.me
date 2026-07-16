@@ -50,7 +50,7 @@ export default function InsightsPage() {
           <div className={styles.laneGrid}>{lanes.map(([title, copy], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
         </section>
       </main>
-      <footer className={styles.footer}><span>Vicky Durel · Insights</span><Link href="mailto:hi@vickydurel.me">hi@vickydurel.me</Link></footer>
+      <footer className={styles.footer}><span>Vicky Durel · Insights</span><Link href="/#contact">Contact</Link></footer>
     </div>
   );
 }

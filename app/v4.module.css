@@ -309,8 +309,6 @@
 .contact { background: var(--violet); color: #fff; display: grid; gap: 90px; grid-template-columns: 0.9fr 1fr; padding: 110px max(48px, calc((100vw - 1404px) / 2)); }
 .contactIntro > span { display: block; font-size: 11px; letter-spacing: 0.13em; margin-bottom: 26px; text-transform: uppercase; }
 .contactIntro p { font-size: 16px; line-height: 1.7; margin: 30px 0 28px; max-width: 600px; }
-.contactLink { align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.5); color: #fff; display: flex; font-family: var(--font-space-grotesk), sans-serif; font-size: 22px; justify-content: space-between; padding-bottom: 12px; text-decoration: none; }
-.contactLink svg { height: 19px; width: 19px; }
 .contactForm { align-self: end; background: rgba(16, 10, 25, 0.92); border-radius: 4px; padding: 30px; }
 .contactForm label { display: flex; flex-direction: column; gap: 9px; }
 .contactForm label > span { color: #d7c8ff; font-size: 10px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; }
@@ -397,7 +395,6 @@
   .aboutMark span { font-size: 90px; }
   .aboutStandards { grid-column: auto; }
   .contact { padding: 82px 20px; }
-  .contactLink { font-size: 18px; }
   .formRow { grid-template-columns: 1fr; }
   .formFooter { align-items: flex-start; flex-direction: column; }
   .footer { grid-template-columns: 1fr; padding: 32px 20px; }

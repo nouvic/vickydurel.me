@@ -1,15 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Layers3, Cpu, BookOpen, Mail } from "lucide-react";
+import { Home, User, Layers3, Cpu, BookOpen, Mail } from "lucide-react";
 import styles from "@/app/v4.module.css";
 
 const TABS = [
   { href: "/", label: "Home", Icon: Home },
-  { href: "#capacity", label: "Work", Icon: Layers3 },
-  { href: "#shift", label: "AI", Icon: Cpu },
+  { href: "/about", label: "About", Icon: User },
+  { href: "/#capacity", label: "Work", Icon: Layers3 },
+  { href: "/#shift", label: "AI", Icon: Cpu },
   { href: "/insights", label: "Insights", Icon: BookOpen },
-  { href: "#contact", label: "Say hi", Icon: Mail },
+  { href: "/#contact", label: "Say hi", Icon: Mail },
 ];
 
 export function BottomNav() {
