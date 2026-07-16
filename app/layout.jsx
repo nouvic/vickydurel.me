@@ -1,5 +1,6 @@
 import "./globals.css";
 import { inter, spaceGrotesk } from "./fonts";
+import { BottomNav } from "@/components/BottomNav";
 import { SITE_URL, SITE_NAME, TAGLINE, DESCRIPTION, PERSON_ID } from "./lib/seo";
 
 export const metadata = {
@@ -100,6 +101,7 @@ export default function RootLayout({ children }) {
       <body>
         <a className="skip-link" href="#main-content">Skip to content</a>
         {children}
+        <BottomNav />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

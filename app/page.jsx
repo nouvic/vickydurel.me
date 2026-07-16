@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { V4ContactForm } from "@/components/V4ContactForm";
 import { MobileBoot } from "@/components/MobileBoot";
-import { BottomNav } from "@/components/BottomNav";
 import { MobileMenu } from "@/components/MobileMenu";
 import { buildMetadata, SITE_URL, SITE_NAME, TAGLINE, DESCRIPTION, PERSON_ID } from "./lib/seo";
 import styles from "./v4.module.css";
@@ -290,7 +289,6 @@ export default function V4Homepage() {
         <p>Product builder and systems operator · Client delivery since 2013</p>
         <div><Link href="/about">About</Link><Link href="/insights">Insights</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><a href="https://www.linkedin.com/in/vicky-durel/">LinkedIn</a><a href="mailto:hi@vickydurel.me">Email</a></div>
       </footer>
-      <BottomNav />
     </div>
   );
 }

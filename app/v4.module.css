@@ -440,19 +440,29 @@
   z-index: 400;
 }
 .bootSplash { inset: 0; position: absolute; }
+.bootSplashImg { object-fit: cover; object-position: 50% 28%; }
 .bootSplashScrim { background: linear-gradient(180deg, rgba(16, 10, 25, 0.42), rgba(16, 10, 25, 0.32) 42%, rgba(16, 10, 25, 0.94)); inset: 0; position: absolute; }
 .bootSplashId { align-items: center; bottom: 12%; display: flex; flex-direction: column; left: 0; position: absolute; right: 0; z-index: 1; }
 .bootSplashId span { align-items: center; background: #fff; border-radius: 26%; color: var(--night); display: flex; font-family: var(--font-space-grotesk), sans-serif; font-size: 22px; font-weight: 700; height: 62px; justify-content: center; width: 62px; }
 .bootSplashId strong { font-family: var(--font-space-grotesk), sans-serif; font-size: 30px; letter-spacing: -0.045em; margin-top: 14px; }
 .bootSplashId small { color: #c9bfe0; font-size: 10px; letter-spacing: 0.14em; margin-top: 6px; text-transform: uppercase; }
+.bootTapHint { bottom: 4%; color: rgba(255, 255, 255, 0.55); font-size: 10px; letter-spacing: 0.12em; position: absolute; text-transform: uppercase; z-index: 1; }
+.bootSlide { animation: boot-fade 440ms ease both; max-width: 480px; }
+.bootSlideKicker { color: var(--violet-light); display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; margin-bottom: 22px; text-transform: uppercase; }
+.bootSlideText { font-family: var(--font-space-grotesk), sans-serif; font-size: clamp(27px, 8vw, 38px); font-weight: 520; letter-spacing: -0.03em; line-height: 1.16; margin: 0; }
+@keyframes boot-fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .bootSkip { background: rgba(255, 255, 255, 0.14); border: 0; border-radius: 999px; color: #eee; font: inherit; font-size: 11px; letter-spacing: 0.08em; padding: 9px 16px; position: absolute; right: 20px; text-transform: uppercase; top: 20px; z-index: 2; }
+.bootDots { bottom: 30px; display: flex; gap: 8px; justify-content: center; left: 0; position: absolute; right: 0; z-index: 2; }
+.bootDot, .bootDotOn { border-radius: 999px; height: 4px; transition: width 300ms ease, background 300ms ease; width: 16px; }
+.bootDot { background: rgba(255, 255, 255, 0.28); }
+.bootDotOn { background: var(--violet-light); width: 26px; }
 
 /* Bottom tab bar (phones) */
 .bottomNav {
   align-items: center;
   backdrop-filter: blur(14px);
-  background: rgba(244, 241, 235, 0.94);
-  border-top: 1px solid rgba(18, 16, 24, 0.12);
+  background: var(--brand-footer-gradient);
+  border-top: 1px solid rgba(164, 120, 255, 0.22);
   bottom: 0;
   display: none;
   justify-content: space-around;
@@ -462,9 +472,9 @@
   right: 0;
   z-index: 120;
 }
-.bottomNavItem { align-items: center; color: var(--muted); display: flex; flex: 1; flex-direction: column; font-size: 10px; gap: 4px; letter-spacing: 0.02em; padding: 4px 0; text-decoration: none; }
+.bottomNavItem { align-items: center; color: #c9bfe0; display: flex; flex: 1; flex-direction: column; font-size: 10px; gap: 4px; letter-spacing: 0.02em; padding: 4px 0; text-decoration: none; }
 .bottomNavItem svg { height: 21px; width: 21px; }
-.bottomNavItem:active { color: var(--violet); }
+.bottomNavItem:active { color: var(--violet-light); }
 
 /* Tablet hamburger + drawer */
 .hamburger { align-items: center; background: transparent; border: 0; color: var(--ink); cursor: pointer; display: none; justify-content: center; padding: 6px; }
@@ -500,7 +510,7 @@
 
 /* Phone: bottom nav visible + image-on-top hero panel */
 @media (max-width: 760px) {
-  .page { padding-bottom: 74px; padding-top: 64px; }
+  .page { padding-top: 64px; }
   .header { padding: 14px 20px; }
   .bottomNav { display: flex; }
   .hero { gap: 0; padding: 0 0 44px; }
