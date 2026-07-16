@@ -10,37 +10,34 @@ const SLIDES = [
   { k: "03 · The ones who win", t: "Not the ones who watch. Not even the ones who know how. The ones who take action, and adapt." },
 ];
 
-const SEEN_KEY = "vd-boot-seen";
+// Module-level, not sessionStorage: this variable lives only for the current
+// JS execution. A real page reload re-evaluates the module and resets it to
+// false, so landing on "/" — including a reload — always shows the intro.
+// Client-side <Link> navigation back to "/" from elsewhere on the site keeps
+// the same JS runtime alive, so it stays true and the intro doesn't repeat.
+let hasShownBoot = false;
 
 // step: "splash" | 0..2 (slide) | "hidden" — advances only on tap, never on a timer.
-// Shows once per browser session/tab: a fresh visit sees it, but tapping "Home" or
-// "Say hi" from elsewhere on the site doesn't re-trigger it every time.
 export function MobileBoot() {
   const [step, setStep] = useState(null);
 
   useEffect(() => {
     const isMobile = window.matchMedia("(max-width: 900px)").matches;
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let seen = false;
-    try { seen = !!window.sessionStorage.getItem(SEEN_KEY); } catch {}
-    setStep(isMobile && !reduced && !seen ? "splash" : "hidden");
+    setStep(isMobile && !reduced && !hasShownBoot ? "splash" : "hidden");
   }, []);
-
-  function markSeen() {
-    try { window.sessionStorage.setItem(SEEN_KEY, "1"); } catch {}
-  }
 
   function advance() {
     setStep((s) => {
       if (s === "splash") return 0;
       if (typeof s === "number" && s < SLIDES.length - 1) return s + 1;
-      markSeen();
+      hasShownBoot = true;
       return "hidden";
     });
   }
 
   function skip() {
-    markSeen();
+    hasShownBoot = true;
     setStep("hidden");
   }
 
