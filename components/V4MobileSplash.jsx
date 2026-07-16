@@ -11,14 +11,16 @@ export function V4MobileSplash() {
   useEffect(() => {
     const mobile = window.matchMedia("(max-width: 760px)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let seen = false;
+    try { seen = !!window.sessionStorage.getItem(SPLASH_KEY); } catch {}
 
-    if (!mobile || reducedMotion || window.sessionStorage.getItem(SPLASH_KEY)) {
+    if (!mobile || reducedMotion || seen) {
       const hideTimer = window.setTimeout(() => setVisible(false), 0);
       return () => window.clearTimeout(hideTimer);
     }
 
     const timer = window.setTimeout(() => {
-      window.sessionStorage.setItem(SPLASH_KEY, "true");
+      try { window.sessionStorage.setItem(SPLASH_KEY, "true"); } catch {}
       setVisible(false);
     }, 1150);
 
@@ -26,7 +28,7 @@ export function V4MobileSplash() {
   }, []);
 
   function dismiss() {
-    window.sessionStorage.setItem(SPLASH_KEY, "true");
+    try { window.sessionStorage.setItem(SPLASH_KEY, "true"); } catch {}
     setVisible(false);
   }
 
